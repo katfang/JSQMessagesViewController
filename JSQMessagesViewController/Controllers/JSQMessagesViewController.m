@@ -124,7 +124,7 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     self.inputToolbar.contentView.textView.placeHolder = NSLocalizedString(@"New Message", @"Placeholder text for the message input text view");
     self.inputToolbar.contentView.textView.delegate = self;
     
-    self.sender = @"JSQDefaultSender";
+    self.sender = self.sender ? self.sender : @"JSQDefaultSender";
     
     self.automaticallyScrollsToMostRecentMessage = YES;
     
